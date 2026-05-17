@@ -1,0 +1,219 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1419;
+    color: #e0e0e0;
+    margin-top: 70px;
+}
+.navbar {
+    background-color: rgba(26, 26, 26, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(112, 128, 144, 0.3);
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #708090 !important;
+}
+.navbar-brand.hover-replace {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+}
+.navbar-brand.hover-replace::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    inset: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #708090;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+.navbar-brand.hover-replace:hover {
+    color: transparent !important;
+}
+.navbar-brand.hover-replace:hover::after {
+    opacity: 1;
+}
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #9ec5ff !important;
+}
+.hero-section {
+    background: linear-gradient(135deg, #0f1419 0%, #708090 100%, #1a1a1a 50%);
+    color: #e0e0e0;
+    padding: 100px 0;
+    border-bottom: 1px solid #708090;
+}
+/* Thinner header used on section pages */
+.page-hero {
+    background: linear-gradient(135deg, #0f1419 0%, #2f3b42 100%);
+    color: #e0e0e0;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(112,128,144,0.15);
+}
+.page-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.page-hero h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e8eef6;
+}
+.page-hero p {
+    margin: 6px 0 0 0;
+    color: #bfcbd6;
+    font-size: 0.95rem;
+}
+.section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333333;
+}
+.section p,
+.section ul,
+.section ol {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #333333;
+}
+.section li {
+    margin-bottom: 0.6em;
+}
+.card {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #333333;
+}
+.btn-custom {
+    background-color: #708090;
+    color: #0f1419;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+}
+.btn-custom:hover {
+    background-color: #5a6c7d;
+    color: #0f1419;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Code block and inline code styling: light background + dark text */
+pre {
+    background: #f6f7f9;
+    color: #0b1220;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Fira Code', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border: 1px solid rgba(11,18,32,0.06);
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+code {
+    background: transparent;
+    color: #0b1220 !important;
+    padding: 0;
+    border-radius: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Fira Code', monospace;
+    font-size: 0.92rem;
+}
+
+/* Ensure syntax-highlighting spans inherit dark text */
+pre code span, pre span, code span {
+    color: inherit !important;
+}
+
+.katex {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    vertical-align: baseline;
+}
+
+.katex .base,
+.katex .mord,
+.katex .text,
+.katex .mathit,
+.katex .amsrm,
+.katex .mbin,
+.katex .mrel,
+.katex .mop,
+.katex .mopen,
+.katex .mclose,
+.katex .msup,
+.katex .msub,
+.katex .mord::before,
+.katex .mord::after {
+    font-size: inherit !important;
+}
+
+.katex-display {
+    margin: 1rem 0;
+    font-size: 1em !important;
+}
+
+.katex-display .katex {
+    display: block;
+}
+
+/* Emphasize bold text in content sections */
+.section strong, .section b {
+    font-weight: 800;
+    color: #0d76ff;
+}
+
+/* Make bold text in dark headers pop */
+.page-hero strong, .page-hero b {
+    font-weight: 800;
+    color: #60a5fa;
+}
+
+/* Fallback for any strong/b tags */
+strong, b {
+    font-weight: 700;
+}
